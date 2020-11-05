@@ -1,0 +1,6 @@
+namespace Mvccrudf.Areas.HelpPage.ModelDescriptions
+{
+    public class SimpleTypeModelDescription : ModelDescription
+    {
+    }
+}

@@ -1,0 +1,46 @@
+﻿@model IEnumerable<Mvccrudf.RegionLocationUnitsAll>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.RowNumber)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Region)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Location)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Unit)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+<tr>
+    <td>
+        @Html.DisplayFor(modelItem => item.RowNumber)
+    </td>
+    <td>
+        @Html.DisplayFor(modelItem => item.Region)
+    </td>
+    <td>
+        @Html.DisplayFor(modelItem => item.Location)
+    </td>
+    <td>
+        @Html.DisplayFor(modelItem => item.Unit)
+    </td>
+    <td>
+        @Html.ActionLink("Edit", "Edit", new { id = item.RowNumber })
+    </td>
+    <td>
+        @Html.ActionLink("Delete", "Delete", new { id = item.RowNumber })
+    </td>
+</tr>
+}
+
+</table>
